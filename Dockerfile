@@ -1,7 +1,7 @@
 FROM java:jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV GITBLIT_VERSION 1.7.1
+ENV GITBLIT_VERSION 1.8.0
 
 RUN apt-get update \
 	&& apt-get dist-upgrade -y \
