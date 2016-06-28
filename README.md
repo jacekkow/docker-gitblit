@@ -56,3 +56,15 @@ File ownership is recursively changed to
 You can configure the instance by editing files 
 in directory /opt/gitblit-data inside the container
 (or appropriate host dir if local storage is used).
+
+By default the JVM is started with options `-server -Xmx1024m`.
+You can override this default using `JAVA_OPTS` environment
+variable:
+
+```bash
+docker run -d --name=gitblit \
+	-p 8080:8080 -p 8443:8443 \
+	-p 9418:9418 -p 29418:29418 \
+	-e "JAVA_OPTS=-Xmx512m" \
+	jacekkow/gitblit
+```
