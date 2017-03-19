@@ -1,4 +1,4 @@
-FROM java:jre
+FROM openjdk:jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
 ENV GITBLIT_VERSION 1.8.0

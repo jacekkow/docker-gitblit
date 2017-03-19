@@ -1,7 +1,7 @@
 # Gitblit
 
 This is a Docker image of Gitblit (http://gitblit.com/)
-based on `java:jre`
+based on `openjdk:jre`
 
 ## Usage
 
