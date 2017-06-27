@@ -16,8 +16,8 @@ RUN wget -O /tmp/gitblit.tar.gz http://dl.bintray.com/gitblit/releases/gitblit-$
 	&& rm -f /tmp/gitblit.tar.gz \
 	&& ln -s gitblit-${GITBLIT_VERSION} gitblit \
 	&& mv gitblit/data gitblit-data-initial \
-	&& mkdir gitblit-data
-RUN groupadd -r -g 500 gitblit \
+	&& mkdir gitblit-data \
+	&& groupadd -r -g 500 gitblit \
 	&& useradd -r -d /opt/gitblit-data -u 500 -g 500 gitblit \
 	&& chown -Rf gitblit:gitblit /opt/gitblit-*
 
