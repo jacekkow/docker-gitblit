@@ -6,7 +6,8 @@ ENV GITBLIT_VERSION 1.8.0
 RUN apt-get update \
 	&& apt-get dist-upgrade -y \
 	&& apt-get install -y git-core sudo wget \
-	&& apt-get clean
+	&& apt-get clean \
+	&& rm -Rf /var/lib/apt/lists/*
 
 # Install Gitblit
 
