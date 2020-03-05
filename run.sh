@@ -10,4 +10,4 @@ fi
 
 chown -Rf gitblit:gitblit /opt/gitblit-data
 
-exec sudo -u gitblit java $JAVA_OPTS -Djava.awt.headless=true -jar /opt/gitblit/gitblit.jar --baseFolder /opt/gitblit-data
+exec sudo -u gitblit `which java` $JAVA_OPTS -Djava.awt.headless=true -cp 'gitblit.jar:ext/*' com.gitblit.GitBlitServer --baseFolder /opt/gitblit-data

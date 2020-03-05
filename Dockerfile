@@ -1,7 +1,7 @@
 FROM openjdk:8-jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV GITBLIT_VERSION 1.8.0
+ENV GITBLIT_VERSION 1.9.0
 
 RUN apt-get update \
 	&& apt-get dist-upgrade -y \
@@ -12,7 +12,7 @@ RUN apt-get update \
 # Install Gitblit
 
 WORKDIR /opt
-RUN wget -O /tmp/gitblit.tar.gz http://dl.bintray.com/gitblit/releases/gitblit-${GITBLIT_VERSION}.tar.gz \
+RUN wget -O /tmp/gitblit.tar.gz "https://github.com/gitblit/gitblit/releases/download/v${GITBLIT_VERSION}/gitblit-${GITBLIT_VERSION}.tar.gz" \
 	&& tar xzf /tmp/gitblit.tar.gz \
 	&& rm -f /tmp/gitblit.tar.gz \
 	&& ln -s gitblit-${GITBLIT_VERSION} gitblit \
