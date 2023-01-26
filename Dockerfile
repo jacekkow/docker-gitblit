@@ -36,4 +36,6 @@ EXPOSE 8080 8443 9418 29418
 
 WORKDIR /opt/gitblit
 COPY run.sh /run.sh
+RUN chown gitblit /run.sh
+RUN chmod +x /run.sh
 CMD /run.sh
