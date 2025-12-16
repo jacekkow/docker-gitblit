@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM eclipse-temurin:8-jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
 ENV GITBLIT_VERSION 1.9.3
