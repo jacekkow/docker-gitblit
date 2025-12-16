@@ -1,7 +1,7 @@
 FROM openjdk:8-jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV GITBLIT_VERSION 1.9.1
+ENV GITBLIT_VERSION 1.9.3
 
 RUN apt-get update \
 	&& apt-get dist-upgrade -y \
