@@ -1,7 +1,7 @@
 FROM eclipse-temurin:8-jre
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV GITBLIT_VERSION 1.9.3
+ENV GITBLIT_VERSION 1.10.0
 
 RUN apt-get update \
 	&& apt-get dist-upgrade -y \
